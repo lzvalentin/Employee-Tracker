@@ -19,6 +19,9 @@ function userOptions() {
             case "View all departments":
                 viewAllDepartments()
                 break;
+            case "View all Roles":
+                viewRoles()
+                break;
         }
     })
 }
@@ -28,6 +31,13 @@ function viewAllDepartments() {
         console.table(depts)
     }).then(() => userOptions())
 }
+
+function viewRoles() {
+    db.roleInfo().then(([roles]) => {
+        console.table(roles)
+    }).then(() => userOptions())
+}
+
 
 function addDept() {
     return inquirer.prompt([

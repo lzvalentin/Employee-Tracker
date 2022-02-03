@@ -13,6 +13,12 @@ class DB {
     roleInfo(){
         return this.connection.promise().query('SELECT role.title, role.id, department.name, role.salary FROM role LEFT JOIN department ON role.department_id = department.id;')
     }
+
+    // employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to **for manager look up CONCAT() mysql
+    employeeInfo(){
+        return this.connection.promise().query('SELECT ')
+
+    }
 }
 
 module.exports = new DB(connection)
