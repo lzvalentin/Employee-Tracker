@@ -61,6 +61,7 @@ function userOptions() {
                 exit ()
         }
     })
+}
 
 const viewAllDepartments = () => {
     db.query(`SELECT * FROM department`, (err, data) => {
