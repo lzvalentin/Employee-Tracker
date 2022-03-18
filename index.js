@@ -57,25 +57,25 @@ function userOptions() {
          }
     ]).then((res) => {
         switch (res.options) {
-            case "Viewalldepartments":
+            case "View all Departments":
                 viewAllDepartments()
                 break;
             case "View all Roles":
                 viewRoles()
                 break;
-            case 'View all employees':
+            case 'View all Employees':
                 viewEmployees()
                 break;
-            case 'Add a department':
+            case 'Add a Department':
                 addDepartment()
                 break;
-            case 'Add a role':
+            case 'Add a Role':
                 addRole()
                 break;
-            case 'Add new employee':
+            case 'Add an Employee':
                 addEmployee()
                 break;
-            case 'Update employee role':
+            case 'Update an Existing Employee Role':
                 updateEmployeeRole()
                 break;
             default:
