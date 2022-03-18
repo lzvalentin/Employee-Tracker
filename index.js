@@ -21,16 +21,43 @@ function userOptions() {
     inquirer.prompt([
         {
             type: 'list',
-            name: 'options',
+            name: 'choices',
             message: "Select from the options listed.",
             choices:
                 [
-                    "View all departments", "View all Roles", "View All Employees", "Add Department", "Add a role", "Add new employee", "Update Employee Role", "Quit"
+                    {
+                        name: "View all Departments",
+                        value: "viewAllDepartments"
+                    },
+                    {
+                        name: "View all Roles",
+                        value: "viewRoles"
+                    },
+                    {
+                        name: "View all Employees",
+                        value: "viewEmployees"
+                    },
+                    {
+                        name: "Add a Department",
+                        value: "addDepartment"
+                    },
+                    {
+                        name: "Add a Role",
+                        value: "addRole"
+                    },
+                    {
+                        name: "Add an Employee",
+                        value: "addEmployee"
+                    },
+                    {
+                        name: "Update an Existing Employee Role",
+                        value: "updateEmployeeRole"
+                    }
                 ]
-        }
+         }
     ]).then((res) => {
         switch (res.options) {
-            case "View all departments":
+            case "Viewalldepartments":
                 viewAllDepartments()
                 break;
             case "View all Roles":
