@@ -12,22 +12,26 @@ We wanted to create interfaces that allow non-developers to easily view and inte
 Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [](#)
+* [License](#license)
+* [Contact](#contact)
 
 ## Installation
 1. Clone Repo. https://github.com/lzvalentin/Employee-Tracker
 1. To begin with open your terminal at root level.
-* `npm i inquirer mysql2 console.table`
+* `npm i inquirer mysql2 console.table dotenv`
 
-2. Once those are installed you must open MySQL. In your terminal input mysql -u root -p and then input your mysql password. 
-* Type SOURCE db/schema.sql; (If no errors pop up from the schema file move forward to next step).
-* Type SOURCE db/seed.sql (If no errors pop up from the schema file move forward to next step).
+2. Once those are installed you must open MySQL. In your terminal input `mysql -u root -p` and then input your mysql password. 
+* Type `SOURCE db/schema.sql`; (If no errors pop up from the schema file move forward to next step).
+* Type `SOURCE db/seed.sql` (If no errors pop up from the schema file move forward to next step).
 * type quit
 
-3. type node index.js
+3. type node index.js to start prompts
 
 
 ## Usage 
+
+![giftracker](./Assets/tracker.gif)
+
 ```md
 GIVEN a command-line application that accepts user input
 WHEN I start the application
@@ -47,3 +51,10 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
+## License
+
+None
+
+## Contact
+
+[Github](www.github.com/lzvalentin).
