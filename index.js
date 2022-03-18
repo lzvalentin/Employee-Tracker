@@ -32,6 +32,7 @@ function userOptions() {
                   "Add a Role",
                   "Add an Employee",
                   "Update an Existing Employee Role",
+                  "exit"
                 ]
          }
     ]).then((res) => {
