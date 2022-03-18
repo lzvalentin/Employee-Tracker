@@ -56,6 +56,7 @@ function userOptions() {
                 ]
          }
     ]).then((res) => {
+        console.log(res)
         switch (res.options) {
             case "View all Departments":
                 viewAllDepartments()
