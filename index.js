@@ -5,6 +5,7 @@ const mysql = require('mysql');
 const divider = '---------------------------------'
 require('dotenv').config();
 
+// connection
 const db = mysql.createConnection(
     {
         host: 'localhost',
@@ -15,7 +16,7 @@ const db = mysql.createConnection(
     console.log(`Connected to the employee_db database.`)
 );
 
-
+// first view of options
 function userOptions() {
     inquirer.prompt([
         {
