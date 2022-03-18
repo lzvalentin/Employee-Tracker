@@ -25,39 +25,17 @@ function userOptions() {
             message: "Select from the options listed.",
             choices:
                 [
-                    {
-                        name: "View all Departments",
-                        value: "viewAllDepartments"
-                    },
-                    {
-                        name: "View all Roles",
-                        value: "viewRoles"
-                    },
-                    {
-                        name: "View all Employees",
-                        value: "viewEmployees"
-                    },
-                    {
-                        name: "Add a Department",
-                        value: "addDepartment"
-                    },
-                    {
-                        name: "Add a Role",
-                        value: "addRole"
-                    },
-                    {
-                        name: "Add an Employee",
-                        value: "addEmployee"
-                    },
-                    {
-                        name: "Update an Existing Employee Role",
-                        value: "updateEmployeeRole"
-                    }
+                  "View all Departments",
+                  "View all Roles",
+                  "View all Employees",
+                  "Add a Department",
+                  "Add a Role",
+                  "Add an Employee",
+                  "Update an Existing Employee Role",
                 ]
          }
     ]).then((res) => {
-        console.log(res)
-        switch (res.options) {
+        switch (res.choices) {
             case "View all Departments":
                 viewAllDepartments()
                 break;
@@ -83,7 +61,6 @@ function userOptions() {
                 exit ()
         }
     })
-}
 
 const viewAllDepartments = () => {
     db.query(`SELECT * FROM department`, (err, data) => {
